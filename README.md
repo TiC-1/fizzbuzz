@@ -104,9 +104,9 @@ tape is working
 
 Great work, you have now successfully set up npm to run tests using tape. 
 
-## Case: return a number, when the number is not divisible by 3 and not divisible by 5
+## Case: return a number, when the number is not divisible by 3 or 5 
 
-Let's write some tests to check if our function returns the number when the number is not divisible by 3 and NOT divisible by 5.
+Let's write some tests to check if our function returns the number when the number is not divisible by 3 or 5.
 
 1. Let's write a failing test. Type the following into fizzbuzz.test.js:
 
@@ -765,15 +765,15 @@ One of the greatest benefits about writing tests is that we can refactor our cod
 
 Let's demonstrate this by refactoring our code slightly and running the tests again.
 
-Let's re-write our fizzbuzz function, but this time the first if statement will check if num is divisible by both 3 and 5 and return 'FizzBuzz' if true:
+Let's re-write our fizzbuzz function, but this time make the first if statement check if num is divisible by both 3 and 5 and return 'FizzBuzz' if true. We will also change the two else if statements as the first if statement checks for both conditions (divisible by both 3 and 5), so we only need to check if the number is either divisible by 3 (for fizz) or divisible by 5 (for bazz). Finally, we will include an else statement to return the number if none of the other conditions are met.
 
 ```
 function fizzbuzz(num) {
   if (num % 3 === 0 && num % 5 === 0) {
     return 'FizzBuzz'
-  } else if (num % 3 === 0 && num % 5 !== 0) {
+  } else if (num % 3 === 0) {
     return 'Fizz'
-  } else if (num % 5 === 0 && num % 3 !== 0) {
+  } else if (num % 5 === 0) {
     return 'Buzz'
   } else {
     return num
@@ -829,4 +829,4 @@ tape is working
   duration:  22ms
   ```
 
-  Awesome, our code still works :)
+  Awesome, our code still works as intended :)
