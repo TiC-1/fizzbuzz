@@ -1,13 +1,6 @@
 const test = require('tape')
 const fizzbuzz = require('../fizzbuzz')
 
-test('tape is working', function (t) {
-  let actual = 1
-  let expected = 1
-  t.equals(actual, expected, 'returns 1')
-  t.end()
-})
-
 test('should return number if not divisible by 3 or 5', function (t) {
   let actual = fizzbuzz(1)
   let expected = 1
