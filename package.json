@@ -1,7 +1,7 @@
 {
   "name": "fizzbuzz",
   "version": "1.0.0",
-  "description": "Use TDD to write a function that will take a number as an argument and returns 'Fizz' if the number is divisible by 3, 'Buzz' if the number is divisible by 5 and 'FizzBuzz' if the number is divisible by both 3 and 5. If the number is neither divisible by 3 or 5, then return the number.",
+  "description": "Task: Write a function that takes a number as an argument and then returns the number to the user. But for multiples of three return “Fizz” instead of the number and for the multiples of five return “Buzz”. For numbers which are multiples of both three and five return “FizzBuzz”.",
   "main": "fizzbuzz.js",
   "directories": {
     "test": "test"
@@ -20,11 +20,6 @@
   },
   "homepage": "https://github.com/AbdullahChaudhry/fizzbuzz#readme",
   "devDependencies": {
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.6.0",
-    "eslint-plugin-standard": "^3.0.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.8.0"
   }
