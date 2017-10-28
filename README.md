@@ -104,7 +104,7 @@ tape is working
 
 Great work, you have now successfully set up npm to run tests using tape. 
 
-## Case: return a number, when the number is not divisible by 3 and not divisible by 5
+## Case: return a number, when the number is not divisible by 3 or 5 
 
 Let's write some tests to check if our function returns the number when the number is not divisible by 3 or 5.
 
