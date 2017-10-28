@@ -765,7 +765,7 @@ One of the greatest benefits about writing tests is that we can refactor our cod
 
 Let's demonstrate this by refactoring our code slightly and running the tests again.
 
-Let's re-write our fizzbuzz function, but this time make the first if statement check if num is divisible by both 3 and 5 and return 'FizzBuzz' if true. We will also change the two else if statements as the first if statement checks for both conditions (divisible by both 3 and 5), so we only need to check if the number is either divisible by 3 (for fizz) or divisible by 5 (for bazz). Finally, we will include an else statement to return the number if none of the other conditions are met.
+Let's re-write our fizzbuzz function, but this time make the first if statement check if num is divisible by both 3 and 5 and return 'FizzBuzz' if true. We will also change the two else if statements as the first if statement checks for both conditions (divisible by both 3 and 5), so we only need to check if the number is either divisible by 3 (for Fizz) or divisible by 5 (for Buzz). Finally, we will include an else statement to return the number if none of the other conditions are met.
 
 ```
 function fizzbuzz(num) {
