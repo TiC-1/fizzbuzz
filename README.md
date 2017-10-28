@@ -1,3 +1,222 @@
-## randomtests 
+## randomtests (work in progress)
 
-I created this branch to demonstrate how to do random testing in tape
+I created this branch to demonstrate how to do random testing in tape (codewars style)
+
+```
+returns fizz for numbers divisible by 3
+
+    ✔ fizzbuzz(423) should return 'Fizz'
+    ✔ fizzbuzz(4698) should return 'Fizz'
+    ✔ fizzbuzz(5208) should return 'Fizz'
+    ✔ fizzbuzz(1452) should return 'Fizz'
+    ✔ fizzbuzz(4269) should return 'Fizz'
+    ✔ fizzbuzz(7959) should return 'Fizz'
+    ✔ fizzbuzz(5229) should return 'Fizz'
+    ✔ fizzbuzz(9876) should return 'Fizz'
+    ✔ fizzbuzz(2448) should return 'Fizz'
+    ✔ fizzbuzz(8046) should return 'Fizz'
+    ✔ fizzbuzz(9258) should return 'Fizz'
+    ✔ fizzbuzz(1038) should return 'Fizz'
+    ✔ fizzbuzz(5157) should return 'Fizz'
+    ✔ fizzbuzz(8418) should return 'Fizz'
+    ✔ fizzbuzz(2511) should return 'Fizz'
+    ✔ fizzbuzz(9762) should return 'Fizz'
+    ✔ fizzbuzz(9738) should return 'Fizz'
+    ✔ fizzbuzz(7137) should return 'Fizz'
+    ✔ fizzbuzz(1626) should return 'Fizz'
+    ✔ fizzbuzz(5238) should return 'Fizz'
+    ✔ fizzbuzz(8367) should return 'Fizz'
+    ✔ fizzbuzz(1278) should return 'Fizz'
+    ✔ fizzbuzz(9756) should return 'Fizz'
+    ✔ fizzbuzz(6321) should return 'Fizz'
+    ✔ fizzbuzz(4293) should return 'Fizz'
+    ✔ fizzbuzz(6609) should return 'Fizz'
+    ✔ fizzbuzz(1746) should return 'Fizz'
+    ✔ fizzbuzz(3273) should return 'Fizz'
+    ✔ fizzbuzz(9546) should return 'Fizz'
+    ✔ fizzbuzz(7221) should return 'Fizz'
+    ✔ fizzbuzz(2724) should return 'Fizz'
+    ✔ fizzbuzz(3168) should return 'Fizz'
+    ✔ fizzbuzz(4677) should return 'Fizz'
+    ✔ fizzbuzz(4068) should return 'Fizz'
+    ✔ fizzbuzz(7197) should return 'Fizz'
+    ✔ fizzbuzz(5457) should return 'Fizz'
+    ✔ fizzbuzz(7041) should return 'Fizz'
+    ✔ fizzbuzz(3039) should return 'Fizz'
+    ✔ fizzbuzz(8646) should return 'Fizz'
+    ✔ fizzbuzz(5811) should return 'Fizz'
+    ✔ fizzbuzz(126) should return 'Fizz'
+    ✔ fizzbuzz(4989) should return 'Fizz'
+    ✔ fizzbuzz(3402) should return 'Fizz'
+    ✔ fizzbuzz(8799) should return 'Fizz'
+    ✔ fizzbuzz(2673) should return 'Fizz'
+    ✔ fizzbuzz(66) should return 'Fizz'
+    ✔ fizzbuzz(3333) should return 'Fizz'
+    ✔ fizzbuzz(4569) should return 'Fizz'
+    ✔ fizzbuzz(3243) should return 'Fizz'
+    ✔ fizzbuzz(3246) should return 'Fizz'
+
+  returns buzz for numbers divisible by 5
+
+    ✔ fizzbuzz(4900) should return 'Buzz'
+    ✔ fizzbuzz(5885) should return 'Buzz'
+    ✔ fizzbuzz(2395) should return 'Buzz'
+    ✔ fizzbuzz(1235) should return 'Buzz'
+    ✔ fizzbuzz(3175) should return 'Buzz'
+    ✔ fizzbuzz(7400) should return 'Buzz'
+    ✔ fizzbuzz(3940) should return 'Buzz'
+    ✔ fizzbuzz(2155) should return 'Buzz'
+    ✔ fizzbuzz(5255) should return 'Buzz'
+    ✔ fizzbuzz(2720) should return 'Buzz'
+    ✔ fizzbuzz(2485) should return 'Buzz'
+    ✔ fizzbuzz(1010) should return 'Buzz'
+    ✔ fizzbuzz(9155) should return 'Buzz'
+    ✔ fizzbuzz(3175) should return 'Buzz'
+    ✔ fizzbuzz(3275) should return 'Buzz'
+    ✔ fizzbuzz(1340) should return 'Buzz'
+    ✔ fizzbuzz(8590) should return 'Buzz'
+    ✔ fizzbuzz(8380) should return 'Buzz'
+    ✔ fizzbuzz(9965) should return 'Buzz'
+    ✔ fizzbuzz(4510) should return 'Buzz'
+    ✔ fizzbuzz(6280) should return 'Buzz'
+    ✔ fizzbuzz(1600) should return 'Buzz'
+    ✔ fizzbuzz(8680) should return 'Buzz'
+    ✔ fizzbuzz(2615) should return 'Buzz'
+    ✔ fizzbuzz(3565) should return 'Buzz'
+    ✔ fizzbuzz(2270) should return 'Buzz'
+    ✔ fizzbuzz(10000) should return 'Buzz'
+    ✔ fizzbuzz(1195) should return 'Buzz'
+    ✔ fizzbuzz(4850) should return 'Buzz'
+    ✔ fizzbuzz(8215) should return 'Buzz'
+    ✔ fizzbuzz(355) should return 'Buzz'
+    ✔ fizzbuzz(215) should return 'Buzz'
+    ✔ fizzbuzz(6410) should return 'Buzz'
+    ✔ fizzbuzz(4030) should return 'Buzz'
+    ✔ fizzbuzz(1205) should return 'Buzz'
+    ✔ fizzbuzz(110) should return 'Buzz'
+    ✔ fizzbuzz(7990) should return 'Buzz'
+    ✔ fizzbuzz(9095) should return 'Buzz'
+    ✔ fizzbuzz(4550) should return 'Buzz'
+    ✔ fizzbuzz(8915) should return 'Buzz'
+    ✔ fizzbuzz(575) should return 'Buzz'
+    ✔ fizzbuzz(4010) should return 'Buzz'
+    ✔ fizzbuzz(7450) should return 'Buzz'
+    ✔ fizzbuzz(7915) should return 'Buzz'
+    ✔ fizzbuzz(6095) should return 'Buzz'
+    ✔ fizzbuzz(4175) should return 'Buzz'
+    ✔ fizzbuzz(2615) should return 'Buzz'
+    ✔ fizzbuzz(7985) should return 'Buzz'
+    ✔ fizzbuzz(5950) should return 'Buzz'
+    ✔ fizzbuzz(8855) should return 'Buzz'
+
+  returns fizzbuzz for numbers divisible by 3 and 5
+
+    ✔ fizzbuzz(5760) should return 'FizzBuzz'
+    ✔ fizzbuzz(9555) should return 'FizzBuzz'
+    ✔ fizzbuzz(2505) should return 'FizzBuzz'
+    ✔ fizzbuzz(5400) should return 'FizzBuzz'
+    ✔ fizzbuzz(8940) should return 'FizzBuzz'
+    ✔ fizzbuzz(2520) should return 'FizzBuzz'
+    ✔ fizzbuzz(5745) should return 'FizzBuzz'
+    ✔ fizzbuzz(7365) should return 'FizzBuzz'
+    ✔ fizzbuzz(4620) should return 'FizzBuzz'
+    ✔ fizzbuzz(7275) should return 'FizzBuzz'
+    ✔ fizzbuzz(6930) should return 'FizzBuzz'
+    ✔ fizzbuzz(2265) should return 'FizzBuzz'
+    ✔ fizzbuzz(9885) should return 'FizzBuzz'
+    ✔ fizzbuzz(2235) should return 'FizzBuzz'
+    ✔ fizzbuzz(7635) should return 'FizzBuzz'
+    ✔ fizzbuzz(990) should return 'FizzBuzz'
+    ✔ fizzbuzz(7305) should return 'FizzBuzz'
+    ✔ fizzbuzz(885) should return 'FizzBuzz'
+    ✔ fizzbuzz(8640) should return 'FizzBuzz'
+    ✔ fizzbuzz(9165) should return 'FizzBuzz'
+    ✔ fizzbuzz(3945) should return 'FizzBuzz'
+    ✔ fizzbuzz(1905) should return 'FizzBuzz'
+    ✔ fizzbuzz(6570) should return 'FizzBuzz'
+    ✔ fizzbuzz(9135) should return 'FizzBuzz'
+    ✔ fizzbuzz(9780) should return 'FizzBuzz'
+    ✔ fizzbuzz(9240) should return 'FizzBuzz'
+    ✔ fizzbuzz(5280) should return 'FizzBuzz'
+    ✔ fizzbuzz(4065) should return 'FizzBuzz'
+    ✔ fizzbuzz(8160) should return 'FizzBuzz'
+    ✔ fizzbuzz(4470) should return 'FizzBuzz'
+    ✔ fizzbuzz(8445) should return 'FizzBuzz'
+    ✔ fizzbuzz(7020) should return 'FizzBuzz'
+    ✔ fizzbuzz(5520) should return 'FizzBuzz'
+    ✔ fizzbuzz(5325) should return 'FizzBuzz'
+    ✔ fizzbuzz(1965) should return 'FizzBuzz'
+    ✔ fizzbuzz(3480) should return 'FizzBuzz'
+    ✔ fizzbuzz(1200) should return 'FizzBuzz'
+    ✔ fizzbuzz(855) should return 'FizzBuzz'
+    ✔ fizzbuzz(375) should return 'FizzBuzz'
+    ✔ fizzbuzz(3690) should return 'FizzBuzz'
+    ✔ fizzbuzz(1425) should return 'FizzBuzz'
+    ✔ fizzbuzz(9390) should return 'FizzBuzz'
+    ✔ fizzbuzz(45) should return 'FizzBuzz'
+    ✔ fizzbuzz(2130) should return 'FizzBuzz'
+    ✔ fizzbuzz(8145) should return 'FizzBuzz'
+    ✔ fizzbuzz(1200) should return 'FizzBuzz'
+    ✔ fizzbuzz(8670) should return 'FizzBuzz'
+    ✔ fizzbuzz(2835) should return 'FizzBuzz'
+    ✔ fizzbuzz(1095) should return 'FizzBuzz'
+    ✔ fizzbuzz(4995) should return 'FizzBuzz'
+
+  returns number for numbers not divisible by 3 or 5
+
+    ✔ fizzbuzz(2249) should return 2249
+    ✔ fizzbuzz(6088) should return 6088
+    ✔ fizzbuzz(7831) should return 7831
+    ✔ fizzbuzz(1867) should return 1867
+    ✔ fizzbuzz(2704) should return 2704
+    ✔ fizzbuzz(1604) should return 1604
+    ✔ fizzbuzz(4847) should return 4847
+    ✔ fizzbuzz(4414) should return 4414
+    ✔ fizzbuzz(5129) should return 5129
+    ✔ fizzbuzz(7183) should return 7183
+    ✔ fizzbuzz(6601) should return 6601
+    ✔ fizzbuzz(3166) should return 3166
+    ✔ fizzbuzz(3734) should return 3734
+    ✔ fizzbuzz(2707) should return 2707
+    ✔ fizzbuzz(8794) should return 8794
+    ✔ fizzbuzz(6796) should return 6796
+    ✔ fizzbuzz(5224) should return 5224
+    ✔ fizzbuzz(689) should return 689
+    ✔ fizzbuzz(8414) should return 8414
+    ✔ fizzbuzz(4352) should return 4352
+    ✔ fizzbuzz(8917) should return 8917
+    ✔ fizzbuzz(3898) should return 3898
+    ✔ fizzbuzz(4718) should return 4718
+    ✔ fizzbuzz(326) should return 326
+    ✔ fizzbuzz(4936) should return 4936
+    ✔ fizzbuzz(8329) should return 8329
+    ✔ fizzbuzz(9991) should return 9991
+    ✔ fizzbuzz(2533) should return 2533
+    ✔ fizzbuzz(523) should return 523
+    ✔ fizzbuzz(9698) should return 9698
+    ✔ fizzbuzz(9709) should return 9709
+    ✔ fizzbuzz(5357) should return 5357
+    ✔ fizzbuzz(4876) should return 4876
+    ✔ fizzbuzz(7969) should return 7969
+    ✔ fizzbuzz(4513) should return 4513
+    ✔ fizzbuzz(6622) should return 6622
+    ✔ fizzbuzz(8149) should return 8149
+    ✔ fizzbuzz(908) should return 908
+    ✔ fizzbuzz(2582) should return 2582
+    ✔ fizzbuzz(7972) should return 7972
+    ✔ fizzbuzz(6281) should return 6281
+    ✔ fizzbuzz(1114) should return 1114
+    ✔ fizzbuzz(8482) should return 8482
+    ✔ fizzbuzz(6682) should return 6682
+    ✔ fizzbuzz(6802) should return 6802
+    ✔ fizzbuzz(6922) should return 6922
+    ✔ fizzbuzz(6623) should return 6623
+    ✔ fizzbuzz(2591) should return 2591
+    ✔ fizzbuzz(556) should return 556
+    ✔ fizzbuzz(3592) should return 3592
+
+
+  total:     200
+  passing:   200
+  duration:  44ms
+  ```
