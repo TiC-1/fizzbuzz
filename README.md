@@ -21,46 +21,46 @@ Let's set up our file structure and use npm to setup our project to use tape
 
 Using the terminal:
 
-1. Create a new folder called fizzbuzz and change directory into it
+**1. Create a new folder called fizzbuzz and change directory into it**
 
 ```
 mkdir fizzbuzz && cd fizzbuzz
 ```
 
-2. Add a file called fizzbuzz.js
+**2. Add a file called fizzbuzz.js**
 
 ```
 touch fizzbuzz.js
 ```
 
-3. Create a tests folder and change directory into tests
+**3. Create a tests folder and change directory into tests**
 
 ```
 mkdir tests && cd tests
 ```
 
-4. Inside tests folder, create a file called fizzbuzz.test.js
+**4. Inside tests folder, create a file called fizzbuzz.test.js**
 
 ```
 touch fizzbuzz.test.js
 ```
-5. change into fizzbuzz directory
+**5. change into fizzbuzz directory**
 
 ```
 cd ..
 ```
-6. Create package.json using npm (skip through questions by pressing enter)
+**6. Create package.json using npm (skip through questions by pressing enter)**
 
 ```
 npm init
 ```
-7. Install Tape and tap-spec using npm, and save as a development dependency
+**7. Install Tape and tap-spec using npm, and save as a development dependency**
 
 ```
 npm install --save-dev tape tap-spec
 ```
 
-8. In our package.json, under scripts add "tape ./test/*.test.js | tap-spec" like the following:
+**8. In our package.json, under scripts add "tape ./test/*.test.js | tap-spec" like the following:**
 
 ```javascript
 "scripts": {
@@ -68,7 +68,7 @@ npm install --save-dev tape tap-spec
 },
 ```
 
-9. Type the following code to fizzbuzz.js
+**9. Type the following code to fizzbuzz.js**
 
 ```javascript
 function fizzbuzz(num) {
@@ -78,7 +78,7 @@ function fizzbuzz(num) {
 module.exports = fizzbuzz;
 ```
 
-10. Inside fizzbuzz.test.js type the following code (do not copy paste!):
+**10. Inside fizzbuzz.test.js type the following code (do not copy paste!):**
 
 ```javascript
 const test = require('tape');
@@ -90,7 +90,7 @@ test('tape is working', function(t) {
 })
 ```
 
-11. Check that the tests are working, by running them using npm:
+**11. Check that the tests are working, by running them using npm:**
 
 ```
 npm run test
@@ -109,7 +109,7 @@ Great work, you have now successfully set up npm to run tests using tape.
 
 Let's write some tests to check if our function returns the number when the number is not divisible by 3 or 5.
 
-1. Let's write a failing test. Type the following into fizzbuzz.test.js:
+**1. Let's write a failing test. Type the following into fizzbuzz.test.js:**
 
 ```javascript
 test('should return num if not divisible by 3 or 5', function(t) {
@@ -118,7 +118,7 @@ test('should return num if not divisible by 3 or 5', function(t) {
 })
 ```
 
-2. type npm run test and watch it fail
+**2. type npm run test and watch it fail**
 
 ```
 tape is working
@@ -152,7 +152,7 @@ tape is working
   duration:  20ms
 ```
 
-3. Inside fizzbuzz.js, write the minimum amount of code so that the test passes as follows:
+**3. Inside fizzbuzz.js, write the minimum amount of code so that the test passes as follows:**
 
 ```javascript
 function fizzbuzz(num) {
@@ -162,7 +162,7 @@ function fizzbuzz(num) {
 module.exports = fizzbuzz;
 ```
 
-4. run 'npm run test' again
+**4. run 'npm run test' again**
 ```javascript
 npm run test
 ```
@@ -182,7 +182,7 @@ tape is working
   passing:   2
   duration:  17ms
 ```
-5. Let's add a few more tests, in fizzbuzz.test.js:
+**5. Let's add a few more tests, in fizzbuzz.test.js:**
 
 ```javascript
 test('should return number if not divisible by 3 or 5', function(t) {
@@ -194,7 +194,7 @@ test('should return number if not divisible by 3 or 5', function(t) {
 })
 ```
 
-6. Let's make these tests pass, in fizzbuzz.js:
+**6. Let's make these tests pass, in fizzbuzz.js:**
 
 ```javascript
 function fizzbuzz(num) {
@@ -207,7 +207,7 @@ function fizzbuzz(num) {
 module.exports = fizzbuzz;
 ```
 
-7. npm run test, watch the tests pass.
+**7. npm run test, watch the tests pass.**
 
 ```
   tape is working
@@ -228,7 +228,7 @@ module.exports = fizzbuzz;
   ```
 
 
-8. These if statements are getting very tiresome, especially if we need to deal with a larger range of numbers (e.g between 1 and 10,000). Wouldn't it better to refactor our code so it takes into account any number that isn't divisible by 3 or 5?
+**8. These if statements are getting very tiresome, especially if we need to deal with a larger range of numbers (e.g between 1 and 10,000). Wouldn't it better to refactor our code so it takes into account any number that isn't divisible by 3 or 5?**
 
 The remainder operator returns the remainder left over when one operand is divided by a second operand
 [See here for more info](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
@@ -255,7 +255,7 @@ function fizzbuzz(num) {
 module.exports = fizzbuzz;
 ```
 
-9. npm run test
+**9. npm run test**
 ```javascript
 npm run test
 ```
@@ -265,7 +265,7 @@ We should see the tests passing.
 
 Let's write some tests to check if our function returns 'Fizz' when number is divisible by 3 and NOT divisible by 5.
 
-1. Let's create some new tests for this edge case:
+**1. Let's create some new tests for this edge case:**
 
 ```javascript
 test("should return 'Fizz' if divisible by 3 and not divisible by 5", function(t) {
@@ -277,7 +277,7 @@ test("should return 'Fizz' if divisible by 3 and not divisible by 5", function(t
 })
 ```
 
-2. Watch the tests fail by doing:
+**2. Watch the tests fail by doing:**
 ```javascript
 npm run test
 ```
@@ -359,7 +359,7 @@ actual:   undefined
 ```
 In all the error messages, tape is telling us that it expected 'Fizz' but the actual value that was returned from our fizzbuzz function was undefined. This is because we haven't written the code to deal with this edge case yet, so by default our function returns undefined.
 
-3. Now write some code to make the tests pass. Inside fizzbuzz.js, type the following:
+**3. Now write some code to make the tests pass. Inside fizzbuzz.js, type the following:**
 
 ```javascript
 function fizzbuzz(num) {
@@ -373,7 +373,7 @@ function fizzbuzz(num) {
 module.exports = fizzbuzz;
 ```
 
-Now run the tests again using:
+**4. Now run the tests again using:**
 ```javascript
 npm run test
 ```
@@ -410,7 +410,7 @@ tape is working
 
 ## Case: Return 'Buzz' when number is divisible by 5 and not divisible by 3
 
-1. Let's write some tests to check if our function returns 'Buzz' when number is divisible by 5 and NOT divisible by 3.
+**1. Let's write some tests to check if our function returns 'Buzz' when number is divisible by 5 and NOT divisible by 3.**
 
 Let's create some new tests for this edge case:
 
@@ -425,7 +425,7 @@ test("should return 'Buzz' if divisible by 5 and not divisible by 3", function(t
 })
 ```
 
-2. Watch the tests fail by doing:
+**2. Watch the tests fail by doing:**
 ```javascript
 npm run test
 ```
@@ -516,7 +516,7 @@ tape is working
   duration:  29ms
   ```
 
-3. Now write some code to make the tests pass. Inside fizzbuzz.js, type the following:
+**3. Now write some code to make the tests pass. Inside fizzbuzz.js, type the following:**
 
 ```javascript
 function fizzbuzz(num) {
@@ -532,7 +532,7 @@ function fizzbuzz(num) {
 module.exports = fizzbuzz;
 ```
 
-4. Now run the tests again using:
+**4. Now run the tests again using:**
 ```javascript
 npm run test
 ```
@@ -578,7 +578,7 @@ Output:
 
 Let's write some tests to check if our function returns 'FizzBuzz' when number is divisible by both 5 AND 3.
 
-1. Let's create some new tests for this edge case:
+**1. Let's create some new tests for this edge case:**
 
 ```javascript
 test("should return 'FizzBuzz' if divisible by 5 and divisible by 3", function(t) {
@@ -591,7 +591,7 @@ test("should return 'FizzBuzz' if divisible by 5 and divisible by 3", function(t
 })
 ```
 
-2. Run the tests to watch it fail
+**2. Run the tests to watch it fail**
 ``` javascript
 npm run test
 ```
@@ -695,7 +695,7 @@ You should be getting the pattern now.
 
 For this last case we can just use an else statement as in our function the only edge case that is not handled is when the number is divisible by both 3 and 5.
 
-3. Inside fizzbuzz.js, type the following:
+**3. Inside fizzbuzz.js, type the following:**
 
 ```javascript
 function fizzbuzz(num) {
@@ -712,7 +712,7 @@ function fizzbuzz(num) {
 
 module.exports = fizzbuzz;
 ```
-4. Run the tests:
+**4. Run the tests:**
 ```javascript
 npm run test
 ```
@@ -766,7 +766,7 @@ One of the greatest benefits about writing tests is that we can refactor our cod
 
 Let's demonstrate this by refactoring our code slightly and running the tests again.
 
-Let's re-write our fizzbuzz function, but this time make the first if statement check if num is divisible by both 3 and 5 and return 'FizzBuzz' if true. We will also change the two else if statements as the first if statement checks for both conditions (divisible by both 3 and 5), so we only need to check if the number is either divisible by 3 (for Fizz) or divisible by 5 (for Buzz). Finally, we will include an else statement to return the number if none of the other conditions are met.
+**1. Let's re-write our fizzbuzz function, but this time make the first if statement check if num is divisible by both 3 and 5 and return 'FizzBuzz' if true. We will also change the two else if statements as the first if statement checks for both conditions (divisible by both 3 and 5), so we only need to check if the number is either divisible by 3 (for Fizz) or divisible by 5 (for Buzz). Finally, we will include an else statement to return the number if none of the other conditions are met.**
 
 ```javascript
 function fizzbuzz(num) {
@@ -784,7 +784,7 @@ function fizzbuzz(num) {
 module.exports = fizzbuzz;
 ```
 
-Run the tests again, using npm run test.
+**2. Run the tests again, using npm run test.**
 ```javascript
 npm run test
 ```
