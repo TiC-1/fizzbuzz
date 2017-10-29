@@ -4,7 +4,8 @@ Use TDD to write a function that will take a number as an argument and returns '
 
 ### For example:
 
-```fizzbuzz(1) => 1
+```javascript
+fizzbuzz(1) => 1
 fizzbuzz(2) => 2
 fizzbuzz(3) => 'Fizz'
 fizzbuzz(4) => 4
@@ -61,7 +62,7 @@ npm install --save-dev tape tap-spec
 
 8. In our package.json, under scripts add "tape ./test/*.test.js | tap-spec" like the following:
 
-```
+```javascript
 "scripts": {
   "test": "tape ./tests/*.test.js | tap-spec"
 },
@@ -69,7 +70,7 @@ npm install --save-dev tape tap-spec
 
 9. Type the following code to fizzbuzz.js
 
-```
+```javascript
 function fizzbuzz(num) {
 
 }
@@ -79,7 +80,7 @@ module.exports = fizzbuzz;
 
 10. Inside fizzbuzz.test.js type the following code (do not copy paste!):
 
-```
+```javascript
 const test = require('tape');
 const fizzbuzz = require('../fizzbuzz.js');
 
@@ -110,7 +111,7 @@ Let's write some tests to check if our function returns the number when the numb
 
 1. Let's write a failing test. Type the following into fizzbuzz.test.js:
 
-```
+```javascript
 test('should return num if not divisible by 3 or 5', function(t) {
   t.equals(fizzbuzz(1), 1, 'fizzbuzz(1) should return 1');
   t.end();
@@ -153,7 +154,7 @@ tape is working
 
 3. Inside fizzbuzz.js, write the minimum amount of code so that the test passes as follows:
 
-```
+```javascript
 function fizzbuzz(num) {
   if (num === 1) return 1
 }
@@ -162,7 +163,7 @@ module.exports = fizzbuzz;
 ```
 
 4. run 'npm run test' again
-```
+```javascript
 npm run test
 ```
 
@@ -183,7 +184,7 @@ tape is working
 ```
 5. Let's add a few more tests, in fizzbuzz.test.js:
 
-```
+```javascript
 test('should return number if not divisible by 3 or 5', function(t) {
   t.equals(fizzbuzz(1), 1, 'fizzbuzz(1) should return 1');
   t.equals(fizzbuzz(2), 2, 'fizzbuzz(2) should return 2');
@@ -195,7 +196,7 @@ test('should return number if not divisible by 3 or 5', function(t) {
 
 6. Let's make these tests pass, in fizzbuzz.js:
 
-```
+```javascript
 function fizzbuzz(num) {
   if (num === 1) return 1;
   else if (num === 2) return 2;
@@ -235,7 +236,7 @@ The remainder operator returns the remainder left over when one operand is divid
 We can use the remainder operator to check if a number is divisible by another number.
 
 Examples:
-```
+```javascript
 10 % 2    // 0
 11 % 2    // 1
 ```
@@ -244,7 +245,7 @@ If the remainder is zero then we know that the second operand is a divisor of th
 
 We can use this in our code to check if a number is not divisible by 3 AND is not divisible by 5. In fizzbuzz.js, refactor as follows:
 
-```
+```javascript
 function fizzbuzz(num) {
   if (num % 3 !== 0 && num % 5 !== 0) {
     return num
@@ -255,7 +256,7 @@ module.exports = fizzbuzz;
 ```
 
 9. npm run test
-```
+```javascript
 npm run test
 ```
 We should see the tests passing.
@@ -266,7 +267,7 @@ Let's write some tests to check if our function returns 'Fizz' when number is di
 
 1. Let's create some new tests for this edge case:
 
-```
+```javascript
 test("should return 'Fizz' if divisible by 3 and not divisible by 5", function(t) {
   t.equals(fizzbuzz(3), 'Fizz', "fizzbuzz(3) should return 'Fizz'");
   t.equals(fizzbuzz(6), 'Fizz', "fizzbuzz(6) should return 'Fizz");
@@ -277,7 +278,7 @@ test("should return 'Fizz' if divisible by 3 and not divisible by 5", function(t
 ```
 
 2. Watch the tests fail by doing:
-```
+```javascript
 npm run test
 ```
 In your terminal you should see similar output as shown below:
@@ -360,7 +361,7 @@ In all the error messages, tape is telling us that it expected 'Fizz' but the ac
 
 3. Now write some code to make the tests pass. Inside fizzbuzz.js, type the following:
 
-```
+```javascript
 function fizzbuzz(num) {
   if (num % 3 !== 0 && num % 5 !== 0) {
     return num
@@ -373,7 +374,7 @@ module.exports = fizzbuzz;
 ```
 
 Now run the tests again using:
-```
+```javascript
 npm run test
 ```
 
@@ -413,7 +414,7 @@ tape is working
 
 Let's create some new tests for this edge case:
 
-```
+```javascript
 test("should return 'Buzz' if divisible by 5 and not divisible by 3", function(t) {
   t.equals(fizzbuzz(5), 'Buzz', "fizzbuzz(5) should return 'Buzz'");
   t.equals(fizzbuzz(10), 'Buzz', "fizzbuzz(10) should return 'Buzz'");
@@ -425,7 +426,7 @@ test("should return 'Buzz' if divisible by 5 and not divisible by 3", function(t
 ```
 
 2. Watch the tests fail by doing:
-```
+```javascript
 npm run test
 ```
 Output:
@@ -517,7 +518,7 @@ tape is working
 
 3. Now write some code to make the tests pass. Inside fizzbuzz.js, type the following:
 
-```
+```javascript
 function fizzbuzz(num) {
   if (num % 3 !== 0 && num % 5 !== 0) {
     return num
@@ -532,7 +533,7 @@ module.exports = fizzbuzz;
 ```
 
 4. Now run the tests again using:
-```
+```javascript
 npm run test
 ```
 
@@ -579,7 +580,7 @@ Let's write some tests to check if our function returns 'FizzBuzz' when number i
 
 1. Let's create some new tests for this edge case:
 
-```
+```javascript
 test("should return 'FizzBuzz' if divisible by 5 and divisible by 3", function(t) {
   t.equals(fizzbuzz(15), 'FizzBuzz', "fizzbuzz(15) should return 'FizzBuzz'");
   t.equals(fizzbuzz(30), 'FizzBuzz', "fizzbuzz(30) should return 'FizzBuzz'");
@@ -591,7 +592,7 @@ test("should return 'FizzBuzz' if divisible by 5 and divisible by 3", function(t
 ```
 
 2. Run the tests to watch it fail
-``` 
+``` javascript
 npm run test
 ```
 Output: 
@@ -696,7 +697,7 @@ For this last case we can just use an else statement as in our function the only
 
 3. Inside fizzbuzz.js, type the following:
 
-```
+```javascript
 function fizzbuzz(num) {
   if (num % 3 !== 0 && num % 5 !== 0) {
     return num
@@ -712,7 +713,7 @@ function fizzbuzz(num) {
 module.exports = fizzbuzz;
 ```
 4. Run the tests:
-```
+```javascript
 npm run test
 ```
 
@@ -767,7 +768,7 @@ Let's demonstrate this by refactoring our code slightly and running the tests ag
 
 Let's re-write our fizzbuzz function, but this time make the first if statement check if num is divisible by both 3 and 5 and return 'FizzBuzz' if true. We will also change the two else if statements as the first if statement checks for both conditions (divisible by both 3 and 5), so we only need to check if the number is either divisible by 3 (for Fizz) or divisible by 5 (for Buzz). Finally, we will include an else statement to return the number if none of the other conditions are met.
 
-```
+```javascript
 function fizzbuzz(num) {
   if (num % 3 === 0 && num % 5 === 0) {
     return 'FizzBuzz'
@@ -784,7 +785,7 @@ module.exports = fizzbuzz;
 ```
 
 Run the tests again, using npm run test.
-```
+```javascript
 npm run test
 ```
 Output:
