@@ -89,7 +89,7 @@ We then assign this function to module.exports so we are able to use our fizzbuz
 
 For more info about module.exports [See here](https://www.sitepoint.com/understanding-module-exports-exports-node-js/)
 
-**10. Inside fizzbuzz.test.js type the following code (do not copy paste!):**
+**10. Inside your tests folder, open fizzbuzz.test.js and type the following code (do not copy paste!):**
 
 ```javascript
 const test = require('tape');
