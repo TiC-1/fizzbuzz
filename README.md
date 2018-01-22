@@ -849,7 +849,7 @@ Excellent! Well done, you have just succesfully written the FizzBuzz function us
 
 ## Conclusion
 
-One of the greatest benefits about writing tests is that we can refactor our code and then run our tests again to make sure everything is working as we intended. If we didn't write any tests it would be very difficult to know if we broke something in the code when changes are made.
+One of the greatest benefits of writing tests is that we can refactor our code and then run our tests again to make sure everything is working as we intended. If we didn't write any tests it would be very difficult to know if we broke something in the code when changes are made.
 
 Let's demonstrate this by refactoring our code slightly and running the tests again.
 
